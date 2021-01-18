@@ -1,0 +1,13 @@
+[Unit]
+Description=Gaerbox Daemon
+
+[Service]
+Type=notify
+ExecStart=/usr/local/bin/gb-daemon.py
+Restart=on-failure
+KillSignal=SIGINT
+
+
+[Install]
+WantedBy=multi-user.target
+Alias=gaerbox.service
